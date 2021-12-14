@@ -48,4 +48,10 @@
   .todos :global(input) {
     border: 1px solid transparent;
   }
+
+  .todos :global(input:focus-visible) {
+    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ff3e00 !important;
+    outline: none;
+  }
 </style>
