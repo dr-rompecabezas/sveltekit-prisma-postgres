@@ -1,20 +1,20 @@
 <script lang="ts">
-  export let todo: Todo
+  export let todo: Todo;
 </script>
 
 <div class="todo">
   <form action="" method="">
     <input type="hidden" name="done" value="" />
-    <button aria-label="Mark done/not done" class="toggle"></button>
+    <button aria-label="Mark done/not done" class="toggle" />
   </form>
 
   <form action="" method="" class="text">
-    <input type="text" value="{todo.text}" />
-    <button aria-label="Save todo" class="save"></button>
+    <input type="text" value={todo.text} />
+    <button aria-label="Save todo" class="save" />
   </form>
 
-  <form action="" method="">
-    <button aria-label="Delete todo" class="delete"></button>
+  <form action="/todos/{todo.uid}.json?_method=delete" method="post">
+    <button aria-label="Delete todo" class="delete" />
   </form>
 </div>
 
