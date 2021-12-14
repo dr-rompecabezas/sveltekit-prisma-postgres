@@ -12,3 +12,9 @@ ports:
 vscode:
   extensions:
     - svelte.svelte-vscode
+
+github:
+  prebuilds:
+    main: true
+    branches: true
+    pullRequests: true
