@@ -6,7 +6,10 @@ export const del: RequestHandler = (request) => {
   }
 
 export const patch: RequestHandler<{}, FormData> = (request) => {
-  const todo = {text: request.body.get("text")}
+  const todo = {
+    text: request.body.get("text"),
+    done: request.body.has("done") ? !!request.body.get("done") : undefined
+  }
   return api(request, todo)
 } 
   
